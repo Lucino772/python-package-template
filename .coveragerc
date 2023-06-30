@@ -1,0 +1,9 @@
+[run]
+branch = True
+source = <PACKAGE>
+omit =
+    noxfile.py
+
+[report]
+omit =
+    tests/*

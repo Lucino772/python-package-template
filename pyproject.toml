@@ -3,12 +3,12 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "<PROJECT_NAME>"
+name = "python-package-template" # Replace with project name
 authors = [
     {name = "Lucino772", email = "lucapalmi772@gmail.com"},
 ]
 # keywords = []
-description = "<PROJECT_DESCRIPTION>"
+# description = ""
 readme = "README.md"
 requires-python = ">=3.7"
 license = {text = "MIT"}
@@ -23,14 +23,14 @@ classifiers = [
 # dependencies = []
 
 [project.urls]
-Homepage = "https://github.com/Lucino772/<PROJECT_NAME>"
-Changelog = "https://github.com/Lucino772/<PROJECT_NAME>/blob/main/CHANGELOG.rst"
+Homepage = "https://github.com/Lucino772/python-package-template" # Replace with project name
+Changelog = "https://github.com/Lucino772/python-package-template/blob/main/CHANGELOG.rst" # Replace with project name
 
 [tool.setuptools]
-packages = ["<PACKAGE>"]
+packages = ["mypackage"]
 
 [tool.setuptools_scm]
-write_to = "<PACKAGE>/_version.py"
+write_to = "mypackage/_version.py"
 
 [tool.black]
 line-length = 79
@@ -45,12 +45,12 @@ exclude = '''
 '''
 
 [tool.towncrier]
-name = "<PROJECT_NAME>"
+name = "python-package-template"
 directory = "changes"
-package = "<PACKAGE>"
+package = "mypackage"
 filename = "CHANGELOG.rst"
 title_format = "{name} v{version} ({project_date})"
-issue_format = "`#{issue} <https://github.com/Lucino772/<PROJECT_NAME>/issues/{issue}>`_"
+issue_format = "`#{issue} <https://github.com/Lucino772/python-package-template/issues/{issue}>`_"
 
 [tool.pytest.ini_options]
 addopts = "--doctest-modules --cov=./ --cov-report=xml ./tests"

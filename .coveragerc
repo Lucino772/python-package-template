@@ -1,6 +1,6 @@
 [run]
 branch = True
-source = <PACKAGE>
+source = mypackage ; Replace with package name
 omit =
     noxfile.py
 

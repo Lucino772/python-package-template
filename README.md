@@ -10,6 +10,8 @@ The following files must be updated with the correct project information:
 - **README.md**
 - **.coveragerc**
 - **pyproject.toml**
+- **docs/conf.py**
+- **docs/index.rst**
 
 ## Licence
 This project uses a

@@ -9,6 +9,26 @@ def tests(session: nox.Session):
 
 
 @nox.session
+def docs(session: nox.Session):
+    session.install("-r", "requirements/requirements-docs.txt")
+    session.install(".")
+
+    if "--serve" in session.posargs:
+        session.run(
+            "sphinx-autobuild",
+            "-b",
+            "dirhtml",
+            "docs/",
+            "docs/_build/html/",
+            "--open-browser",
+        )
+    else:
+        session.run(
+            "sphinx-build", "-b", "dirhtml", "docs/", "docs/_build/html/"
+        )
+
+
+@nox.session
 def lint(session: nox.Session):
     session.install("pre-commit")
     session.run("pre-commit", "run", *session.posargs)

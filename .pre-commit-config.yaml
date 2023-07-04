@@ -28,5 +28,5 @@ repos:
     rev: v1.4.1
     hooks:
     -   id: mypy
-        exclude: ^examples/|^tests/
+        exclude: ^examples/|^tests/|^docs/
         additional_dependencies: [types-all]
